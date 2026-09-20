@@ -48,7 +48,7 @@
             --glass-border: rgba(203, 213, 225, 0.95);
             --glass-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
             --subcard-bg: rgba(241, 245, 249, 0.92);
-            --subcard-border: rgba(203, 213, 225, 0.88);
+            --subcard-border: transparent;
             --nav-bg: rgba(248, 250, 252, 0.92);
             --nav-border: rgba(226, 232, 240, 0.95);
             --footer-bg: rgba(241, 245, 249, 0.96);
@@ -78,7 +78,7 @@
             --glass-border: rgba(255, 255, 255, 0.13);
             --glass-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12), 0 20px 45px -10px rgba(0, 0, 0, 0.55);
             --subcard-bg: rgba(255, 255, 255, 0.045);
-            --subcard-border: rgba(255, 255, 255, 0.09);
+            --subcard-border: transparent;
             --nav-bg: rgba(17, 19, 25, 0.88);
             --nav-border: rgba(255, 255, 255, 0.09);
             --footer-bg: rgba(15, 17, 23, 0.92);
@@ -103,6 +103,8 @@
             font-family: 'Outfit', sans-serif;
             line-height: 1.6;
             transition: background-color 0.25s ease, color 0.25s ease;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         /* Ambient Mesh Glows */
@@ -167,25 +169,20 @@
             border-color: rgba(15, 23, 42, 0.28);
         }
 
-        /* Inner Sub-Cards */
+        /* Inner Sub-Cards (Borderless, Smooth Clean Surface) */
         .sub-panel {
             background: var(--subcard-bg);
-            border: 1px solid var(--subcard-border);
+            border: 1px solid transparent;
             border-radius: 0.875rem;
-            transition: border-color 0.2s ease, background-color 0.2s ease;
+            transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
         .sub-panel:hover {
-            border-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.07);
         }
 
         html:not(.dark) .sub-panel:hover {
-            border-color: rgba(15, 23, 42, 0.25);
-        }
-
-        /* Unified Card Divider */
-        .card-divider {
-            border-top: 1px solid var(--subcard-border);
+            background-color: rgba(226, 232, 240, 0.95);
         }
 
         /* Tech Badges */
@@ -264,14 +261,14 @@
     <!-- FIXED NAVBAR (RESPONSIVE 3-COLUMN BALANCED LAYOUT) -->
     <nav class="fixed top-0 left-0 w-full z-50 border-b backdrop-blur-xl transition duration-200"
          style="background-color: var(--nav-bg); border-color: var(--nav-border);">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+        <div class="max-w-5xl mx-auto px-3.5 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
             
-            <!-- Left: Brand -->
-            <a href="#" class="group flex flex-col justify-center shrink-0">
-                <span class="font-bold text-sm sm:text-base tracking-tight text-main group-hover:opacity-80 transition leading-tight">
+            <!-- Left: Brand (Flexible and shrink-safe on narrow mobile screens) -->
+            <a href="#" class="group flex flex-col justify-center min-w-0 pr-1.5 shrink">
+                <span class="font-bold text-sm sm:text-base tracking-tight text-main group-hover:opacity-80 transition leading-tight truncate">
                     Abdullah Ali
                 </span>
-                <span class="text-[11px] sm:text-xs font-mono text-sub leading-tight mt-0.5">
+                <span class="text-[10px] sm:text-xs font-mono text-sub leading-tight mt-0.5 truncate">
                     Backend &amp; Systems Engineer
                 </span>
             </a>
@@ -284,11 +281,11 @@
                 <a href="#projects" class="px-3 py-1.5 rounded-full text-xs font-medium text-body hover:text-main hover:bg-slate-300/50 dark:hover:bg-white/10 transition">Projects</a>
             </div>
 
-            <!-- Right: Actions & Socials -->
+            <!-- Right: Actions & Socials (Theme toggle & Contact on mobile; full socials on tablet/PC) -->
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
                 <!-- Theme Toggle -->
                 <button id="themeToggleBtn" onclick="toggleTheme()" type="button"
-                        class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box flex items-center justify-center hover:opacity-80 transition cursor-pointer"
+                        class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box flex items-center justify-center hover:opacity-80 transition cursor-pointer shrink-0"
                         aria-label="Toggle theme" title="Toggle theme">
                     <!-- Sun Icon (Active in Dark Mode) -->
                     <svg id="sunIcon" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
@@ -300,27 +297,27 @@
                     </svg>
                 </button>
 
-                <!-- GitHub -->
+                <!-- GitHub (Desktop/Tablet) -->
                 <a href="https://github.com/abdullah-ali-338" target="_blank" rel="noopener noreferrer" 
-                   class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box flex items-center justify-center hover:opacity-80 transition" 
+                   class="hidden sm:flex w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box items-center justify-center hover:opacity-80 transition shrink-0" 
                    title="GitHub" aria-label="GitHub">
                     <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                     </svg>
                 </a>
 
-                <!-- LinkedIn -->
+                <!-- LinkedIn (Desktop/Tablet) -->
                 <a href="https://www.linkedin.com/in/abdullah-ali-se" target="_blank" rel="noopener noreferrer" 
-                   class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box flex items-center justify-center hover:opacity-80 transition" 
+                   class="hidden sm:flex w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box items-center justify-center hover:opacity-80 transition shrink-0" 
                    title="LinkedIn" aria-label="LinkedIn">
                     <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.5a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
                     </svg>
                 </a>
 
-                <!-- Contact CTA -->
+                <!-- Contact CTA (Compact & fits 100% on all mobile devices) -->
                 <a href="#contact" 
-                   class="h-8 sm:h-9 px-2.5 sm:px-3.5 rounded-xl btn-cta text-[11px] sm:text-xs font-semibold shadow-sm flex items-center justify-center">
+                   class="h-8 sm:h-9 px-2.5 sm:px-3.5 rounded-xl btn-cta text-[11px] sm:text-xs font-semibold shadow-sm flex items-center justify-center shrink-0">
                     <span>Contact</span>
                 </a>
             </div>
@@ -399,7 +396,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 sm:pt-5 card-divider flex items-center justify-between gap-2 font-mono text-xs text-sub">
+                <div class="pt-4 sm:pt-5 flex items-center justify-between gap-2 font-mono text-xs text-sub">
                     <span>September 2026</span>
                     <div class="flex gap-2">
                         <span class="pill text-[11px] py-0.5 px-2">Python</span>
@@ -428,7 +425,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-5 pt-3.5 sm:pt-4 card-divider font-mono text-xs text-sub flex justify-between items-center">
+                    <div class="mt-5 pt-3.5 sm:pt-4 font-mono text-xs text-sub flex justify-between items-center">
                         <span>Expected Graduation</span>
                         <span class="font-semibold text-main">2029</span>
                     </div>
