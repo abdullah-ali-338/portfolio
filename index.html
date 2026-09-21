@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Ali | Backend & Systems Engineer</title>
-    <!-- Custom Terminal Favicon (Vector SVG Data URI) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111319' stroke='%23334155' stroke-width='1.5'/%3E%3Cpath d='M7 10l6 6-6 6' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cline x1='16' y1='22' x2='25' y2='22' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
-    <!-- Prevent FOUC: Set Theme Immediately (Defaults to Dark) -->
     <script>
         if (localStorage.getItem('theme') === 'light') {
             document.documentElement.classList.remove('dark');
@@ -14,13 +12,11 @@
             document.documentElement.classList.add('dark');
         }
     </script>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Outfit & Fira Code -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -39,7 +35,6 @@
     </script>
 
     <style>
-        /* High-Contrast Light Mode (Deep slate typography, zero washed-out silver) */
         :root {
             --bg-canvas: #f8fafc;
             --canvas-gradient: radial-gradient(circle at 50% 0%, #e2e8f0 0%, #f8fafc 70%);
@@ -69,7 +64,6 @@
             --code-text: #090d16;
         }
 
-        /* Graphite-Gray Glass Dark Mode (Rich charcoal, high-contrast white & silver) */
         html.dark {
             --bg-canvas: #111319;
             --canvas-gradient: radial-gradient(ellipse at 50% 0%, #1e222e 0%, #13151b 65%, #0d0f14 100%);
@@ -109,7 +103,6 @@
             width: 100%;
         }
 
-        /* Ambient Mesh Glows */
         .canvas-bg {
             position: fixed;
             inset: 0;
@@ -151,7 +144,6 @@
             100% { transform: translate(3vw, 5vh) scale(1.05); }
         }
 
-        /* Frosted Glass Surface */
         .glass-panel {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -171,7 +163,6 @@
             border-color: rgba(15, 23, 42, 0.28);
         }
 
-        /* Inner Sub-Cards (Borderless, Smooth Clean Surface) */
         .sub-panel {
             background: var(--subcard-bg);
             border: 1px solid transparent;
@@ -187,7 +178,6 @@
             background-color: rgba(226, 232, 240, 0.95);
         }
 
-        /* Tech Badges */
         .pill {
             background: var(--pill-bg);
             border: 1px solid var(--pill-border);
@@ -202,7 +192,6 @@
             letter-spacing: 0.01em;
         }
 
-        /* Primary Action Button */
         .btn-cta {
             background-color: var(--btn-primary-bg);
             color: var(--btn-primary-text);
@@ -214,14 +203,12 @@
             transform: translateY(-1px);
         }
 
-        /* Icon Container Box */
         .icon-box {
             background-color: var(--icon-box-bg);
             border: 1px solid var(--icon-box-border);
             color: var(--icon-color);
         }
 
-        /* Text Gradients & Colors */
         .heading-gradient {
             background: var(--heading-gradient);
             -webkit-background-clip: text;
@@ -242,7 +229,6 @@
             font-size: 0.85em;
         }
 
-        /* Clean scrollbar */
         ::-webkit-scrollbar { width: 7px; }
         ::-webkit-scrollbar-track { background: var(--bg-canvas); }
         ::-webkit-scrollbar-thumb {
@@ -253,19 +239,20 @@
     </style>
 </head>
 <body class="antialiased selection:bg-slate-500/20 selection:text-white relative">
+    <svg style="display:none">
+        <symbol id="icon-github" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.5a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/></symbol>
+    </svg>
 
-    <!-- Ambient Glowing Backdrop -->
     <div class="canvas-bg" aria-hidden="true">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
     </div>
 
-    <!-- FIXED NAVBAR (RESPONSIVE 3-COLUMN BALANCED LAYOUT) -->
     <nav class="fixed top-0 left-0 w-full z-50 border-b backdrop-blur-xl transition duration-200"
          style="background-color: var(--nav-bg); border-color: var(--nav-border);">
         <div class="max-w-5xl mx-auto px-3.5 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
-            
-            <!-- Left: Brand (Flexible and shrink-safe on narrow mobile screens) -->
+
             <a href="#" class="group flex flex-col justify-center min-w-0 pr-1.5 shrink">
                 <span class="font-bold text-sm sm:text-base tracking-tight text-main group-hover:opacity-80 transition leading-tight truncate">
                     Abdullah Ali
@@ -275,7 +262,6 @@
                 </span>
             </a>
 
-            <!-- Center: Navigation Links (Desktop Centered Island) -->
             <div class="hidden md:flex items-center gap-1 bg-slate-200/50 dark:bg-white/[0.04] border border-slate-300/70 dark:border-white/10 px-2.5 py-1.5 rounded-full backdrop-blur-md">
                 <a href="#experience" class="px-3 py-1.5 rounded-full text-xs font-medium text-body hover:text-main hover:bg-slate-300/50 dark:hover:bg-white/10 transition">Experience</a>
                 <a href="#philosophy" class="px-3 py-1.5 rounded-full text-xs font-medium text-body hover:text-main hover:bg-slate-300/50 dark:hover:bg-white/10 transition">Philosophy</a>
@@ -283,42 +269,31 @@
                 <a href="#projects" class="px-3 py-1.5 rounded-full text-xs font-medium text-body hover:text-main hover:bg-slate-300/50 dark:hover:bg-white/10 transition">Projects</a>
             </div>
 
-            <!-- Right: Actions & Socials (Theme toggle & Contact on mobile; full socials on tablet/PC) -->
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <!-- Theme Toggle -->
                 <button id="themeToggleBtn" onclick="toggleTheme()" type="button"
                         class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box flex items-center justify-center hover:opacity-80 transition cursor-pointer shrink-0"
                         aria-label="Toggle theme" title="Toggle theme">
-                    <!-- Sun Icon (Active in Dark Mode) -->
                     <svg id="sunIcon" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
                         <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
                     </svg>
-                    <!-- Moon Icon (Active in Light Mode) -->
                     <svg id="moonIcon" class="w-3.5 h-3.5 sm:w-4 sm:h-4 hidden fill-current" viewBox="0 0 24 24">
                         <path d="M12.3 2a10 10 0 0 0-.19 2 10 10 0 0 0 10 10c.69 0 1.36-.07 2-.19A10 10 0 1 1 12.3 2z"/>
                     </svg>
                 </button>
 
-                <!-- GitHub (Desktop/Tablet) -->
-                <a href="https://github.com/abdullah-ali-338" target="_blank" rel="noopener noreferrer" 
-                   class="hidden sm:flex w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box items-center justify-center hover:opacity-80 transition shrink-0" 
+                <a href="https://github.com/abdullah-ali-338" target="_blank" rel="noopener noreferrer"
+                   class="hidden sm:flex w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box items-center justify-center hover:opacity-80 transition shrink-0"
                    title="GitHub" aria-label="GitHub">
-                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                    </svg>
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"><use href="#icon-github"/></svg>
                 </a>
 
-                <!-- LinkedIn (Desktop/Tablet) -->
-                <a href="https://www.linkedin.com/in/abdullah-ali-se" target="_blank" rel="noopener noreferrer" 
-                   class="hidden sm:flex w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box items-center justify-center hover:opacity-80 transition shrink-0" 
+                <a href="https://www.linkedin.com/in/abdullah-ali-se" target="_blank" rel="noopener noreferrer"
+                   class="hidden sm:flex w-8 h-8 sm:w-9 sm:h-9 rounded-xl icon-box items-center justify-center hover:opacity-80 transition shrink-0"
                    title="LinkedIn" aria-label="LinkedIn">
-                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
-                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.5a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
-                    </svg>
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"><use href="#icon-linkedin"/></svg>
                 </a>
 
-                <!-- Contact CTA (Compact & fits 100% on all mobile devices) -->
-                <a href="#contact" 
+                <a href="#contact"
                    class="h-8 sm:h-9 px-2.5 sm:px-3.5 rounded-xl btn-cta text-[11px] sm:text-xs font-semibold shadow-sm flex items-center justify-center shrink-0">
                     <span>Contact</span>
                 </a>
@@ -328,7 +303,6 @@
 
     <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-28 sm:pt-36 pb-16 sm:pb-20 space-y-16 sm:space-y-24">
 
-        <!-- HERO SECTION -->
         <header class="pt-2 sm:pt-4">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel mb-6 sm:mb-8">
                 <span class="relative flex h-2 w-2">
@@ -345,7 +319,7 @@
                     Backend <br>
                     <span class="heading-gradient">Engineer</span>
                 </h1>
-                
+
                 <p class="text-base sm:text-lg text-body font-normal leading-relaxed mb-8 sm:mb-10">
                     CS student at UMT Lahore. Building low-latency backend APIs, distributed microservices, and high-throughput inference systems.
                 </p>
@@ -364,10 +338,8 @@
             </div>
         </header>
 
-        <!-- EXPERIENCE & EDUCATION GRID -->
         <section id="experience" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
 
-            <!-- INTERNSHIP CARD -->
             <div class="glass-panel p-6 sm:p-8 lg:p-10 md:col-span-2 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-5 sm:mb-6 flex-wrap gap-2">
@@ -407,16 +379,14 @@
                 </div>
             </div>
 
-            <!-- EDUCATION & CREDENTIAL -->
             <div class="flex flex-col gap-6 sm:gap-8">
 
-                <!-- Education -->
                 <div class="glass-panel p-6 sm:p-8 flex-1 flex flex-col justify-between">
                     <div>
                         <span class="text-xs font-mono font-semibold text-sub uppercase tracking-wider block mb-2">Academic Foundation</span>
                         <h3 class="text-base sm:text-lg font-bold text-main">BS Computer Science</h3>
                         <p class="text-xs sm:text-sm text-body font-medium mb-4 sm:mb-5">UMT Lahore</p>
-                        
+
                         <p class="text-xs text-sub leading-relaxed mb-4 sm:mb-5">
                             Focusing on algorithms, systems programming, and database design.
                         </p>
@@ -433,7 +403,6 @@
                     </div>
                 </div>
 
-                <!-- Credential -->
                 <div class="glass-panel p-6 sm:p-8">
                     <span class="text-xs font-mono font-semibold text-sub uppercase tracking-wider block mb-2">Certification</span>
                     <a href="https://coursera.org/share/b861e7a7499abea5db880ba0e4f6be7f" target="_blank" rel="noopener noreferrer" class="group block">
@@ -449,7 +418,6 @@
 
         </section>
 
-        <!-- WHY BACKEND ENGINEERING -->
         <section id="philosophy" class="glass-panel p-6 sm:p-8 lg:p-10">
             <div class="max-w-2xl mb-6 sm:mb-8">
                 <span class="text-xs font-mono font-semibold text-sub uppercase tracking-wider block mb-2">System Philosophy</span>
@@ -492,7 +460,6 @@
             </div>
         </section>
 
-        <!-- CURRENTLY EXPLORING -->
         <section class="glass-panel p-6 sm:p-8 lg:p-10">
             <div class="flex items-center justify-between mb-5 sm:mb-6 flex-wrap gap-2">
                 <div>
@@ -525,7 +492,6 @@
             </div>
         </section>
 
-        <!-- TECHNICAL STACK -->
         <section id="skills" class="space-y-5 sm:space-y-6">
             <div class="flex items-center justify-between">
                 <div>
@@ -536,7 +502,6 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
 
-                <!-- Languages -->
                 <div class="glass-panel p-6 sm:p-8">
                     <h4 class="font-bold text-main text-xs sm:text-sm mb-4">Languages</h4>
                     <div class="space-y-2 text-xs">
@@ -559,7 +524,6 @@
                     </div>
                 </div>
 
-                <!-- Frameworks -->
                 <div class="glass-panel p-6 sm:p-8">
                     <h4 class="font-bold text-main text-xs sm:text-sm mb-4">Architecture</h4>
                     <div class="space-y-2 text-xs">
@@ -582,7 +546,6 @@
                     </div>
                 </div>
 
-                <!-- Tools -->
                 <div class="glass-panel p-6 sm:p-8">
                     <h4 class="font-bold text-main text-xs sm:text-sm mb-4">Tooling</h4>
                     <div class="space-y-2 text-xs">
@@ -605,7 +568,6 @@
                     </div>
                 </div>
 
-                <!-- Competencies -->
                 <div class="glass-panel p-6 sm:p-8">
                     <h4 class="font-bold text-main text-xs sm:text-sm mb-4">Core Focus</h4>
                     <div class="space-y-2 text-xs">
@@ -631,7 +593,6 @@
             </div>
         </section>
 
-        <!-- SELECTED PROJECTS -->
         <section id="projects" class="space-y-5 sm:space-y-6">
             <div class="flex items-center justify-between">
                 <div>
@@ -642,7 +603,6 @@
 
             <div class="space-y-5 sm:space-y-6">
 
-                <!-- PROJECT 1: WIDGET AI -->
                 <div class="glass-panel p-6 sm:p-8 lg:p-10">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-5">
                         <div>
@@ -650,18 +610,16 @@
                             <h4 class="text-lg sm:text-2xl font-bold text-main">Widget AI</h4>
                         </div>
                         <div class="flex items-center gap-2">
-                            <a href="https://widget-ai.duckdns.org" target="_blank" rel="noopener noreferrer" 
+                            <a href="https://widget-ai.duckdns.org" target="_blank" rel="noopener noreferrer"
                                class="h-8 px-3 btn-cta rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-sm">
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
                                 <span>Demo</span>
                             </a>
-                            <a href="https://github.com/abdullah-ali-338/widget-ai" target="_blank" rel="noopener noreferrer" 
+                            <a href="https://github.com/abdullah-ali-338/widget-ai" target="_blank" rel="noopener noreferrer"
                                class="h-8 px-3 sub-panel text-main text-xs font-medium rounded-lg flex items-center gap-1.5 hover:opacity-80 transition">
-                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                </svg>
+                                <svg class="w-3.5 h-3.5 fill-current"><use href="#icon-github"/></svg>
                                 <span>Code</span>
                             </a>
                         </div>
@@ -699,18 +657,15 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 2: TERMINAL HANGMAN ENGINE -->
                 <div class="glass-panel p-6 sm:p-8 lg:p-10">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-5">
                         <div>
                             <span class="pill text-xs mb-2">Systems &amp; Algorithms</span>
                             <h4 class="text-lg sm:text-2xl font-bold text-main">Terminal Hangman Engine</h4>
                         </div>
-                        <a href="https://github.com/abdullah-ali-338/hangman-engine-cpp" target="_blank" rel="noopener noreferrer" 
+                        <a href="https://github.com/abdullah-ali-338/hangman-engine-cpp" target="_blank" rel="noopener noreferrer"
                            class="h-8 px-3 sub-panel text-main text-xs font-medium rounded-lg flex items-center gap-1.5 self-start sm:self-auto hover:opacity-80 transition">
-                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                            </svg>
+                            <svg class="w-3.5 h-3.5 fill-current"><use href="#icon-github"/></svg>
                             <span>Code</span>
                         </a>
                     </div>
@@ -746,18 +701,15 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 3: AUTOMATED FILE ORGANIZER -->
                 <div class="glass-panel p-6 sm:p-8 lg:p-10">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-5">
                         <div>
                             <span class="pill text-xs mb-2">OS &amp; Automation</span>
                             <h4 class="text-lg sm:text-2xl font-bold text-main">Automated File Organizer</h4>
                         </div>
-                        <a href="https://github.com/abdullah-ali-338/automated-file-organizer-python" target="_blank" rel="noopener noreferrer" 
+                        <a href="https://github.com/abdullah-ali-338/automated-file-organizer-python" target="_blank" rel="noopener noreferrer"
                            class="h-8 px-3 sub-panel text-main text-xs font-medium rounded-lg flex items-center gap-1.5 self-start sm:self-auto hover:opacity-80 transition">
-                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                            </svg>
+                            <svg class="w-3.5 h-3.5 fill-current"><use href="#icon-github"/></svg>
                             <span>Code</span>
                         </a>
                     </div>
@@ -796,7 +748,6 @@
             </div>
         </section>
 
-        <!-- CONTACT & QUICK FACTS -->
         <section id="contact" class="glass-panel p-6 sm:p-8 lg:p-10">
             <div class="max-w-xl mb-6 sm:mb-8">
                 <span class="pill text-xs mb-2.5">Get In Touch</span>
@@ -806,7 +757,6 @@
                 </p>
             </div>
 
-            <!-- Quick Facts -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-6 sm:mb-8">
                 <div class="p-4 sm:p-5 sub-panel">
                     <span class="text-xs font-mono text-sub block mb-1">Location</span>
@@ -825,9 +775,8 @@
                 </div>
             </div>
 
-            <!-- Actions -->
             <div class="flex flex-wrap items-center gap-3 pt-4 sm:pt-5">
-                <a href="mailto:abdullahhh33846@gmail.com" 
+                <a href="mailto:abdullahhh33846@gmail.com"
                    class="h-9 sm:h-10 px-4 sm:px-5 btn-cta rounded-xl font-semibold text-xs shadow-sm flex items-center justify-center gap-2">
                     <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -835,19 +784,15 @@
                     <span>Email Abdullah</span>
                 </a>
 
-                <a href="https://www.linkedin.com/in/abdullah-ali-se" target="_blank" rel="noopener noreferrer" 
+                <a href="https://www.linkedin.com/in/abdullah-ali-se" target="_blank" rel="noopener noreferrer"
                    class="h-9 sm:h-10 px-4 sub-panel text-main font-medium text-xs rounded-xl flex items-center justify-center gap-2 hover:opacity-80 transition">
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.5a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
-                    </svg>
+                    <svg class="w-3.5 h-3.5 fill-current"><use href="#icon-linkedin"/></svg>
                     <span>LinkedIn</span>
                 </a>
 
-                <a href="https://github.com/abdullah-ali-338" target="_blank" rel="noopener noreferrer" 
+                <a href="https://github.com/abdullah-ali-338" target="_blank" rel="noopener noreferrer"
                    class="h-9 sm:h-10 px-4 sub-panel text-main font-medium text-xs rounded-xl flex items-center justify-center gap-2 hover:opacity-80 transition">
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                    </svg>
+                    <svg class="w-3.5 h-3.5 fill-current"><use href="#icon-github"/></svg>
                     <span>GitHub</span>
                 </a>
 
@@ -864,7 +809,6 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="border-t py-8 sm:py-10 backdrop-blur-xl transition duration-200"
             style="background-color: var(--footer-bg); border-color: var(--nav-border);">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
@@ -910,10 +854,8 @@
             applyTheme(!isCurrentlyDark);
         }
 
-        // Initialize theme UI state
         applyTheme(localStorage.getItem('theme') !== 'light');
 
-        // Copy email helper
         function copyEmailToClipboard() {
             const email = "abdullahhh33846@gmail.com";
             const tempInput = document.createElement("input");
