@@ -2,7 +2,7 @@
 
 A clean, responsive, single-file personal portfolio engineered with a technical specification and print-editorial aesthetic. Designed to highlight backend architectures, systems engineering projects, and API infrastructure.
 
-**Live Site:** 
+**Live Site:** https://abdullah-ali-338.github.io/portfolio
 
 ---
 
