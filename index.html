@@ -101,7 +101,7 @@
     }
     .theme-toggle:hover, .menu-toggle:hover { background: var(--surface-strong); transform: translateY(-1px); }
     .theme-toggle svg { width: 15px; height: 15px; }
-    .menu-toggle { display: none; border-radius: 9px; }
+    .menu-toggle { display: none; border-radius: 999px; }
     .nav-cta { color: var(--ink) !important; }
 
     .hero { padding: 80px 0 0; position: relative; }
@@ -219,6 +219,7 @@
     .hero .reveal:nth-child(2) { transition-delay: .12s; }
     .project-card:nth-child(2) { transition-delay: .06s; }
     .project-card:nth-child(3) { transition-delay: .12s; }
+    .project-card:nth-child(4) { transition-delay: .18s; }
     @keyframes pulse { 0% { transform: scale(.75); opacity: .45; } 100% { transform: scale(1.8); opacity: 0; } }
 
     @media (max-width: 850px) {
@@ -321,7 +322,7 @@
     <section class="section shell" id="work" aria-labelledby="work-heading">
       <div class="section-heading reveal">
         <div><p class="section-index">01 / SELECTED WORK</p><h2 id="work-heading">Systems built to work.</h2></div>
-        <p class="section-note">Three practical builds: each a chance to get closer to how reliable software behaves under real constraints.</p>
+        <p class="section-note">Four practical builds: each a chance to get closer to how reliable software behaves under real constraints.</p>
       </div>
       <div class="projects">
         <article class="project-card glass featured-project reveal">
@@ -335,8 +336,19 @@
           </div>
           <div class="project-actions"><a href="https://widget-ai.duckdns.org" target="_blank" rel="noreferrer">Live demo <span aria-hidden="true">↗</span></a><a href="https://github.com/abdullah-ali-338/widget-ai" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
         </article>
-        <article class="project-card glass reveal">
+        <article class="project-card glass featured-project reveal">
           <div class="project-number">02</div>
+          <div class="project-main">
+            <p class="project-kicker">Real-time Weather Dashboard</p>
+            <h3 class="project-title">YeeWeather</h3>
+            <p class="project-description">A sleek, real-time weather dashboard featuring an ultra-minimal liquid glassmorphic UI, dynamic ambient gradient backgrounds, debounced global geocoding, and a 7-day forecast outlook using Open-Meteo APIs.</p>
+            <p class="project-outcome">Zero-build setup · Vercel deployment</p>
+            <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Vanilla JS</span><span class="tag">Open-Meteo API</span><span class="tag">Glassmorphism</span></div>
+          </div>
+          <div class="project-actions"><a href="https://yee-weather.duckdns.org" target="_blank" rel="noreferrer">Live demo <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card glass reveal">
+          <div class="project-number">03</div>
           <div class="project-main">
             <p class="project-kicker">Systems &amp; algorithms</p>
             <h3 class="project-title">Terminal Hangman Engine</h3>
@@ -347,7 +359,7 @@
           <div class="project-actions"><a href="https://github.com/abdullah-ali-338/hangman-engine-cpp" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
         </article>
         <article class="project-card glass reveal">
-          <div class="project-number">03</div>
+          <div class="project-number">04</div>
           <div class="project-main">
             <p class="project-kicker">Operating systems &amp; automation</p>
             <h3 class="project-title">Automated File Organizer</h3>
